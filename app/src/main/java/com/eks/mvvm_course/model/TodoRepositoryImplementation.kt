@@ -3,7 +3,7 @@ package com.eks.mvvm_course.model
 import kotlinx.coroutines.flow.Flow
 
 class TodoRepositoryImplementation(
-    private val dao: TodoDAO // to actually access the db 
+    private val dao: TodoDAO // to actually access the db || this is Constructor dependency injection
 ) : TodoRepository {
 
     override suspend fun createTodo(todo: Todo) {
