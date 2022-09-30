@@ -23,7 +23,7 @@ interface TodoDAO {
     suspend fun readTodo_byId(id: Int): Todo? // returns a nullable "To do" cuz the id might not exist
 
     @Query("SELECT * FROM todo")
-    suspend fun readTodos(): Flow<List<Todo>> // returns all "To do"s || Flow means we get real time updates
+    fun readTodos(): Flow<List<Todo>> // returns all "To do"s || Flow means we get real time updates
 
     @Update
     suspend fun updateTodo(todo: Todo)

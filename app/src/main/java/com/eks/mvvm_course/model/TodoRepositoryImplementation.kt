@@ -14,7 +14,7 @@ class TodoRepositoryImplementation(
         return dao.readTodo_byId(id)
     }
 
-    override suspend fun readTodos(): Flow<List<Todo>> {
+    override fun readTodos(): Flow<List<Todo>> {
         return dao.readTodos()
     }
 

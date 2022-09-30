@@ -20,7 +20,7 @@ interface TodoRepository {
     suspend fun readTodo_byId(id: Int): Todo? // returns a nullable "To do" cuz the id might not exist
 
 
-    suspend fun readTodos(): Flow<List<Todo>> // returns all "To do"s || Flow means we get real time updates
+    fun readTodos(): Flow<List<Todo>> // returns all "To do"s || Flow means we get real time updates
 
 
     suspend fun updateTodo(todo: Todo)
